@@ -1,0 +1,58 @@
+#Arlequin input file written by program the simulation program sim_coal.exe
+
+
+[Profile]
+	Title="A series of simulated samples"
+	NbSamples=2
+
+	GenotypicData=1
+	GameticPhase=1
+	RecessiveData=0
+	DataType=STANDARD
+	LocusSeparator=WHITESPACE
+	MissingData='?'
+
+[Data]
+	[[Samples]]
+
+
+		SampleName="Sample 1"
+		SampleSize=5
+		SampleData= {
+1_1	1	A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+		A 	C 	A 	T 	G 	G 	A 	C 	T 	A 	
+1_2	1	A 	C 	A 	A 	G 	G 	A 	C 	A 	A 	
+		A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+1_3	1	A 	C 	A 	T 	G 	G 	T 	C 	T 	A 	
+		A 	C 	A 	A 	G 	G 	A 	C 	T 	T 	
+1_4	1	A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+		A 	C 	A 	A 	C 	G 	A 	C 	A 	A 	
+1_5	1	A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+		A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+
+}
+		SampleName="Sample 2"
+		SampleSize=5
+		SampleData= {
+2_1	1	A 	G 	A 	A 	G 	T 	A 	C 	A 	A 	
+		A 	G 	A 	A 	G 	G 	A 	C 	T 	A 	
+2_2	1	A 	C 	A 	A 	G 	G 	A 	C 	T 	A 	
+		A 	C 	A 	T 	G 	G 	T 	G 	T 	A 	
+2_3	1	T 	C 	A 	A 	G 	G 	A 	G 	T 	A 	
+		A 	C 	C 	A 	G 	G 	A 	G 	T 	A 	
+2_4	1	A 	C 	A 	T 	G 	G 	A 	G 	T 	A 	
+		A 	C 	A 	A 	G 	G 	T 	C 	T 	A 	
+2_5	1	T 	C 	A 	A 	G 	G 	A 	C 	A 	T 	
+		T 	C 	A 	A 	G 	G 	A 	C 	A 	A 	
+
+}
+
+[[Structure]]
+
+	StructureName="Simulated data"
+	NbGroups=1
+	Group={
+	   "Sample 1"
+	   "Sample 2"
+	}
+

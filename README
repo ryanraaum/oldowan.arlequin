@@ -1,0 +1,5 @@
+Read and write Arlequin format.
+
+The oldowan.arlequin package can be used to read and write sequence data in the
+Arlequin format. 
+
