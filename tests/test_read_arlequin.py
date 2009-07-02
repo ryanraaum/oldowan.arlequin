@@ -1,5 +1,5 @@
-from oldowan.arlequin import iterate_arlequin
-from oldowan.arlequin import read_arlequin
+from oldowan.arlequin.iterate import iterate_arlequin
+from oldowan.arlequin.read import read_arlequin
 
 import os
 
