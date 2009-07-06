@@ -35,7 +35,7 @@ class arlequin(object):
                       doc="True if the file is closed")
 
     __fobj = None
-    __buff = 'x' # needs to be initialized with non-zero, non-'>' character
+    __sample_names = []
 
     def __init__(self, 
                  filename_or_data, 
@@ -120,11 +120,26 @@ class arlequin(object):
         self.flush()
 
     def write_sample(self, sample_name, sample_data):
+        self.__sample_names.append(sample_name)
         self.__fobj.write('\t\tSampleName="%s"\n' % sample_name)
         self.__fobj.write('\t\tSampleSize=%d\n' % len(sample_data))
         self.__fobj.write('\t\tSampleData={\n')
         for entry in sample_data:
             self.__fobj.write('%s\t%d\t%s\n' % (entry['id'], entry['n'], entry['value']))
         self.__fobj.write('}\n')
+        self.__fobj.write('\n')
+    
+    def write_structure(self, groups, structure_name="Default Structure"):
+        self.__fobj.write('\t[[Structure]]\n')
+        self.__fobj.write('\n')
+        self.__fobj.write('\t\tStructureName="%s"\n' % structure_name)
+        self.__fobj.write('\t\tNbGroups=%d\n' % len(groups))
+        self.__fobj.write('\n')
+        for group in groups:
+            self.__fobj.write('\t\tGroup={\n')
+            for name in group:
+                self.__fobj.write('\t\t\t"%s"\n' % name)
+            self.__fobj.write('\t\t}\n')
+            self.__fobj.write('\n')
         self.__fobj.write('\n')
 
